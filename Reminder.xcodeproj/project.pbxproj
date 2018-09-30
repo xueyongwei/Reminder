@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		47E62BB221607DCF00032B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BB121607DCF00032B61 /* AppDelegate.swift */; };
-		47E62BB421607DCF00032B61 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BB321607DCF00032B61 /* FirstViewController.swift */; };
-		47E62BB621607DCF00032B61 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BB521607DCF00032B61 /* SecondViewController.swift */; };
+		47E62BB421607DCF00032B61 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BB321607DCF00032B61 /* TodayViewController.swift */; };
+		47E62BB621607DCF00032B61 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BB521607DCF00032B61 /* ReminderViewController.swift */; };
 		47E62BB921607DCF00032B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E62BB721607DCF00032B61 /* Main.storyboard */; };
 		47E62BBB21607DD100032B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E62BBA21607DD100032B61 /* Assets.xcassets */; };
 		47E62BBE21607DD100032B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E62BBC21607DD100032B61 /* LaunchScreen.storyboard */; };
+		47E62BC6216085B600032B61 /* FullScreenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC5216085B600032B61 /* FullScreenAlertViewController.swift */; };
+		47E62BC82160A1A000032B61 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC72160A1A000032B61 /* AddTableViewController.swift */; };
+		47E62BCA2160A5D400032B61 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC92160A5D400032B61 /* EditorViewController.swift */; };
+		47E62BCC2160D28400032B61 /* TimeChoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47E62BAE21607DCF00032B61 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E62BB121607DCF00032B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47E62BB321607DCF00032B61 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		47E62BB521607DCF00032B61 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		47E62BB321607DCF00032B61 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		47E62BB521607DCF00032B61 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		47E62BB821607DCF00032B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47E62BBA21607DD100032B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E62BBD21607DD100032B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E62BBF21607DD100032B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E62BC5216085B600032B61 /* FullScreenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAlertViewController.swift; sourceTree = "<group>"; };
+		47E62BC72160A1A000032B61 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		47E62BC92160A5D400032B61 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeChoseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				47E62BB121607DCF00032B61 /* AppDelegate.swift */,
-				47E62BB321607DCF00032B61 /* FirstViewController.swift */,
-				47E62BB521607DCF00032B61 /* SecondViewController.swift */,
+				47E62BB321607DCF00032B61 /* TodayViewController.swift */,
+				47E62BB521607DCF00032B61 /* ReminderViewController.swift */,
+				47E62BC5216085B600032B61 /* FullScreenAlertViewController.swift */,
+				47E62BC72160A1A000032B61 /* AddTableViewController.swift */,
+				47E62BC92160A5D400032B61 /* EditorViewController.swift */,
+				47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */,
 				47E62BB721607DCF00032B61 /* Main.storyboard */,
 				47E62BBA21607DD100032B61 /* Assets.xcassets */,
 				47E62BBC21607DD100032B61 /* LaunchScreen.storyboard */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E62BB621607DCF00032B61 /* SecondViewController.swift in Sources */,
+				47E62BC6216085B600032B61 /* FullScreenAlertViewController.swift in Sources */,
+				47E62BCA2160A5D400032B61 /* EditorViewController.swift in Sources */,
+				47E62BB621607DCF00032B61 /* ReminderViewController.swift in Sources */,
 				47E62BB221607DCF00032B61 /* AppDelegate.swift in Sources */,
-				47E62BB421607DCF00032B61 /* FirstViewController.swift in Sources */,
+				47E62BB421607DCF00032B61 /* TodayViewController.swift in Sources */,
+				47E62BCC2160D28400032B61 /* TimeChoseViewController.swift in Sources */,
+				47E62BC82160A1A000032B61 /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = Reminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +322,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = Reminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
