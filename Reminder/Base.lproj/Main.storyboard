@@ -37,6 +37,7 @@
                                     <constraint firstAttribute="height" constant="100" id="DPR-r8-k9R"/>
                                     <constraint firstAttribute="width" constant="100" id="MuL-4q-aoX"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -119,6 +120,7 @@
                                     <constraint firstAttribute="width" constant="100" id="GfU-UX-XaZ"/>
                                     <constraint firstAttribute="height" constant="100" id="HMO-F3-dJb"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="继续">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -506,6 +508,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="JR8-gA-4zD"/>
                                                 <constraint firstAttribute="height" constant="100" id="vCV-lu-YtQ"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="OK">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
