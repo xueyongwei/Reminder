@@ -7,20 +7,68 @@
 //
 
 import UIKit
-
+protocol EditorViewControllerProtocol:NSObjectProtocol {
+    func editorViewControllerShouldEndEdit(_ str:String?) -> Bool
+}
 class EditorViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var leadingConst: NSLayoutConstraint!
+    @IBOutlet weak var heightConst: NSLayoutConstraint!
+    
+    @IBOutlet weak var trallingConst: NSLayoutConstraint!
+    
+    var defaultText:String? = ""
+    
+    weak var delegate:EditorViewControllerProtocol?
+    
+    typealias EditComitHandle = (String) -> ()
+    
+    var commitHandle: EditComitHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.textField.alpha = 0.5
+        self.leadingConst.constant = 30
+        self.trallingConst.constant = 30
+        self.heightConst.constant = 44
         let save = UIBarButtonItem.init(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(onSaveClick))
         self.navigationItem.rightBarButtonItem = save
-        
+        self.textField.text = defaultText
         // Do any additional setup after loading the view.
+        
+    }
+    fileprivate func animateShow(){
+        self.leadingConst.constant = 20
+        self.heightConst.constant = 50
+        self.trallingConst.constant = 20
+        UIView.animate(withDuration: 0.2, animations: {
+            self.textField.alpha = 1
+            self.view.layoutIfNeeded()
+        }) { (finished) in
+            
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        animateShow()
     }
     
     @objc func onSaveClick(){
+        
+        self.commitHandle?(self.textField.text ?? "")
         self.navigationController?.popViewController(animated: true)
+//        if self.delegate?.editorViewControllerShouldEndEdit(self.textField.text) ?? false {
+        
+//        }
+        
+        
         
     }
 

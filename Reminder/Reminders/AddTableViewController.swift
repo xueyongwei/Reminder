@@ -10,11 +10,19 @@ import UIKit
 
 class AddTableViewController: UITableViewController {
 
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var noteTF: UITextField!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var repeatLabel: UILabel!
+    @IBOutlet weak var notiSwitch: UISwitch!
+    
+    @IBOutlet weak var cleaSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = .white
-        self.tableView.backgroundColor = .white
         
         let save = UIBarButtonItem.init(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(onSaveClick))
         self.navigationItem.rightBarButtonItem = save
@@ -98,10 +106,17 @@ class AddTableViewController: UITableViewController {
         if segue.identifier == "noteEdit" {
             let vc = segue.destination as! EditorViewController
             vc.title = "编辑备注"
-          
+            vc.defaultText = self.noteTF.text
+            vc.commitHandle = {[weak self] str in
+                self?.noteTF.text = str
+            }
         }else if segue.identifier == "titleEdit" {
             let vc = segue.destination as! EditorViewController
             vc.title = "编辑事件名"
+            vc.defaultText = self.nameTF.text
+            vc.commitHandle = {[weak self] str in
+                self?.nameTF.text = str
+            }
         }else{
             
         }
@@ -112,5 +127,6 @@ class AddTableViewController: UITableViewController {
 
 
 class AddTableViewCell: UITableViewCell {
-   
+  
+    
 }

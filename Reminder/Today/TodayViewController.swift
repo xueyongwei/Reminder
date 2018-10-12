@@ -10,12 +10,27 @@ import UIKit
 
 class TodayViewController: UIViewController {
 
+    @IBOutlet weak var countDownLabel: CountDownLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        resetCountDown()
+        countDownLabel.start()
+        countDownLabel.countDownCompleteClosure = {[unowned self] in
+            print("finished")
+        }
+    }
+    
+    func resetCountDown(){
+        countDownLabel.prefix = ""
+        countDownLabel.maxSecond = 120000
+    }
+    
+    
 }
 

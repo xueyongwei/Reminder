@@ -88,9 +88,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：喝水" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4h-eJ-ywY">
+                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：喝水" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4h-eJ-ywY">
                                                     <rect key="frame" x="250.5" y="31.5" width="75.5" height="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -119,9 +119,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：200ML" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-JG-VQ0">
+                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：200ML" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-JG-VQ0">
                                                     <rect key="frame" x="233.5" y="31.5" width="92.5" height="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -199,6 +199,9 @@
                                                 <constraint firstItem="S86-Yg-RHr" firstAttribute="leading" secondItem="0oq-gm-WzR" secondAttribute="leading" constant="15" id="V9J-ff-R3J"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tcW-iW-l7j" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="4U3-Hw-Ocv"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddTableViewCell" rowHeight="80" id="PdW-0L-MOt" customClass="AddTableViewCell" customModule="Reminder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="376" width="375" height="80"/>
@@ -261,8 +264,12 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Jmr-BZ-Ucb" kind="show" id="Sms-hw-9Ta"/>
-                        <segue destination="NvR-ml-SdM" kind="presentation" modalPresentationStyle="overCurrentContext" id="uAm-Gh-zXg"/>
+                        <outlet property="cleaSwitch" destination="Djm-Da-QJV" id="nx2-R6-Jv9"/>
+                        <outlet property="nameTF" destination="C4h-eJ-ywY" id="WlG-Fd-PiT"/>
+                        <outlet property="noteTF" destination="l3N-JG-VQ0" id="1Lq-aL-6dP"/>
+                        <outlet property="notiSwitch" destination="enR-uH-D4U" id="r4l-aS-AGc"/>
+                        <outlet property="repeatLabel" destination="ziD-OB-xUv" id="1xX-VW-fZI"/>
+                        <outlet property="timeLabel" destination="FHh-qu-zBe" id="3Le-rg-ppa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKo-gT-hzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,13 +284,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-J4-q8J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-J4-q8J">
                                 <rect key="frame" x="20" y="146" width="335" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fek-JR-W6e"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -295,10 +302,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="URB-6F-4PI"/>
                     </view>
+                    <connections>
+                        <outlet property="heightConst" destination="fek-JR-W6e" id="LGu-D1-hIE"/>
+                        <outlet property="leadingConst" destination="jDM-ul-x5a" id="GM0-IO-kd4"/>
+                        <outlet property="textField" destination="gfJ-J4-q8J" id="Rg3-uU-M03"/>
+                        <outlet property="trallingConst" destination="TaS-zI-7Af" id="3M8-jX-Cio"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmd-wr-76w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3788" y="39"/>
+            <point key="canvasLocation" x="3847" y="-80"/>
         </scene>
         <!--Time Chose View Controller-->
         <scene sceneID="zVv-EL-luI">
@@ -370,11 +383,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stX-qF-Ll9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3788" y="795"/>
+            <point key="canvasLocation" x="3846" y="595"/>
+        </scene>
+        <!--Repeat Model View Controller-->
+        <scene sceneID="BbQ-0W-CnN">
+            <objects>
+                <viewController id="tcW-iW-l7j" customClass="RepeatModelViewController" customModule="Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNX-wx-ElA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-yc-xys">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R9V-8D-94G">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-PT-bFi">
+                                            <rect key="frame" x="137.5" y="457" width="100" height="100"/>
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Gg7-DH-d8e"/>
+                                                <constraint firstAttribute="width" constant="100" id="XgA-Qc-1lQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="OK">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="50"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onDoneClick:" destination="tcW-iW-l7j" eventType="touchUpInside" id="nX7-6q-aMw"/>
+                                            </connections>
+                                        </button>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-cd-KHe">
+                                            <rect key="frame" x="80" y="313.5" width="215" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="hee-YN-pre"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Once"/>
+                                                <segment title="Daily"/>
+                                                <segment title="Monty"/>
+                                                <segment title="Year"/>
+                                            </segments>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="VL9-PT-bFi" firstAttribute="centerX" secondItem="R9V-8D-94G" secondAttribute="centerX" id="31u-9P-fbs"/>
+                                        <constraint firstItem="hEt-cd-KHe" firstAttribute="centerX" secondItem="R9V-8D-94G" secondAttribute="centerX" id="Kh0-vO-JL3"/>
+                                        <constraint firstItem="hEt-cd-KHe" firstAttribute="centerY" secondItem="R9V-8D-94G" secondAttribute="centerY" id="oyL-Id-AWb"/>
+                                        <constraint firstAttribute="bottom" secondItem="VL9-PT-bFi" secondAttribute="bottom" constant="110" id="q38-SI-P9D"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TyG-yc-xys" secondAttribute="trailing" id="UVe-0d-m8i"/>
+                            <constraint firstAttribute="bottom" secondItem="TyG-yc-xys" secondAttribute="bottom" id="XrD-GX-wgm"/>
+                            <constraint firstItem="TyG-yc-xys" firstAttribute="top" secondItem="hNX-wx-ElA" secondAttribute="top" id="c2A-Q6-XAQ"/>
+                            <constraint firstItem="TyG-yc-xys" firstAttribute="leading" secondItem="hNX-wx-ElA" secondAttribute="leading" id="rVi-Md-6OT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9G5-mq-Mfr"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConst" destination="q38-SI-P9D" id="U6D-Rb-jg8"/>
+                        <outlet property="okBtn" destination="VL9-PT-bFi" id="3Tt-4I-722"/>
+                        <outlet property="segmentCenterYConst" destination="oyL-Id-AWb" id="hRw-Ow-nau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ux7-yV-M3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3846" y="1305"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="adb-iB-nia"/>
         <segue reference="8ff-dO-7sd"/>
     </inferredMetricsTieBreakers>
 </document>

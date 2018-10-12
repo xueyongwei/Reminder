@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:08:46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-9d-s29">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:08:46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-9d-s29" customClass="CountDownLabel" customModule="Reminder" customModuleProvider="target">
                                 <rect key="frame" x="133.5" y="233" width="108" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -71,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="8CL-ZW-p70"/>
                     </view>
                     <navigationItem key="navigationItem" title="Next" id="mmb-1C-Ua8"/>
+                    <connections>
+                        <outlet property="countDownLabel" destination="9hl-9d-s29" id="HvC-gZ-3Mh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vly-tF-IDE" sceneMemberID="firstResponder"/>
             </objects>
