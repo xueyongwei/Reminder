@@ -30,6 +30,7 @@ extension Persistent {
         do {
             try self.cdManager.context.save()
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
+            ReminderNotification.center.addNoti(with: areminder)
         } catch  {
             EZAlertController.alert("数据库存储失败", message: error.localizedDescription)
             return false
@@ -42,6 +43,7 @@ extension Persistent {
         do {
             try self.cdManager.context.save()
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
+            ReminderNotification.center.remove(with: reminder)
             return true
         } catch {
             EZAlertController.alert("数据删除失败", message: error.localizedDescription)
@@ -61,6 +63,7 @@ extension Persistent {
         do {
             try self.cdManager.context.save()
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
+            
         } catch  {
             EZAlertController.alert("数据库更新失败", message: error.localizedDescription)
             return false
