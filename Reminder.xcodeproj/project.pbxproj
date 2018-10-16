@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4727DACE2175C1E000D37198 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */; };
+		4727DAD12175C57200D37198 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */; };
 		47654E3F216DA4800068F570 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47654E3E216DA4800068F570 /* Today.storyboard */; };
 		47654E41216DA4900068F570 /* Reminders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47654E40216DA4900068F570 /* Reminders.storyboard */; };
 		47654E43216DA7AF0068F570 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47654E42216DA7AF0068F570 /* More.storyboard */; };
@@ -26,12 +28,14 @@
 		47E62BBB21607DD100032B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E62BBA21607DD100032B61 /* Assets.xcassets */; };
 		47E62BBE21607DD100032B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E62BBC21607DD100032B61 /* LaunchScreen.storyboard */; };
 		47E62BC6216085B600032B61 /* FullScreenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC5216085B600032B61 /* FullScreenAlertViewController.swift */; };
-		47E62BC82160A1A000032B61 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC72160A1A000032B61 /* AddTableViewController.swift */; };
+		47E62BC82160A1A000032B61 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC72160A1A000032B61 /* EditTableViewController.swift */; };
 		47E62BCA2160A5D400032B61 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BC92160A5D400032B61 /* EditorViewController.swift */; };
 		47E62BCC2160D28400032B61 /* TimeChoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		47654E3E216DA4800068F570 /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		47654E40216DA4900068F570 /* Reminders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminders.storyboard; sourceTree = "<group>"; };
 		47654E42216DA7AF0068F570 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -53,7 +57,7 @@
 		47E62BBD21607DD100032B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E62BBF21607DD100032B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E62BC5216085B600032B61 /* FullScreenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAlertViewController.swift; sourceTree = "<group>"; };
-		47E62BC72160A1A000032B61 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		47E62BC72160A1A000032B61 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		47E62BC92160A5D400032B61 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeChoseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4727DACF2175C56100D37198 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47654E44216DAE0F0068F570 /* Today */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +93,13 @@
 		47654E45216DAE3D0068F570 /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				4727DACF2175C56100D37198 /* Views */,
 				47654E40216DA4900068F570 /* Reminders.storyboard */,
 				47E62BB521607DCF00032B61 /* ReminderViewController.swift */,
+				4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */,
 				47E62BCB2160D28400032B61 /* TimeChoseViewController.swift */,
 				47B947AB2170AAC600213528 /* RepeatModelViewController.swift */,
-				47E62BC72160A1A000032B61 /* AddTableViewController.swift */,
+				47E62BC72160A1A000032B61 /* EditTableViewController.swift */,
 			);
 			path = Reminders;
 			sourceTree = "<group>";
@@ -257,6 +271,7 @@
 				47B947AA2170A39A00213528 /* EZAlertController.swift in Sources */,
 				47E62BCA2160A5D400032B61 /* EditorViewController.swift in Sources */,
 				47E62BB621607DCF00032B61 /* ReminderViewController.swift in Sources */,
+				4727DACE2175C1E000D37198 /* ReminderTableViewController.swift in Sources */,
 				47E62BB221607DCF00032B61 /* AppDelegate.swift in Sources */,
 				47B947A521709A0600213528 /* CDManager.swift in Sources */,
 				47654E64216DAF280068F570 /* CountDownLabel+Timer.swift in Sources */,
@@ -265,10 +280,11 @@
 				47654E65216DAF280068F570 /* CountDownLabel.swift in Sources */,
 				47B947A821709E6000213528 /* Persistent.swift in Sources */,
 				47E62BCC2160D28400032B61 /* TimeChoseViewController.swift in Sources */,
+				4727DAD12175C57200D37198 /* ReminderTableViewCell.swift in Sources */,
 				47B947AC2170AAC600213528 /* RepeatModelViewController.swift in Sources */,
 				47654E63216DAF280068F570 /* CountDownLabel+CountDown.swift in Sources */,
 				47654E68216DB7810068F570 /* Model.xcdatamodeld in Sources */,
-				47E62BC82160A1A000032B61 /* AddTableViewController.swift in Sources */,
+				47E62BC82160A1A000032B61 /* EditTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

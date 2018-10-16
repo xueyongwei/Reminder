@@ -10,9 +10,14 @@ import UIKit
 
 class TimeChoseViewController: UIViewController {
 
+    typealias TimeChosedHandle = (_ date:Date) -> ()
+    
     @IBOutlet weak var datePickerCenterYConst: NSLayoutConstraint!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var okBtn: UIButton!
+    
+    var chosedTimeHandle: TimeChosedHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +41,13 @@ class TimeChoseViewController: UIViewController {
         }
         
     }
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        let date = sender.date
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.chosedTimeHandle?(self.datePicker.date)
         
     }
     
