@@ -47,7 +47,7 @@ class TimeChoseViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.chosedTimeHandle?(self.datePicker.date)
+        
         
     }
     
@@ -61,6 +61,7 @@ class TimeChoseViewController: UIViewController {
             self.okBtn.alpha = 0
         }) { (finished) in
             if finished{
+                self.chosedTimeHandle?(self.datePicker.date)
                 self.dismiss(animated: false, completion: nil)
             }
         }

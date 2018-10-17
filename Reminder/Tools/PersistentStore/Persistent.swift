@@ -32,27 +32,31 @@ extension Persistent {
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
             ReminderNotification.center.addNoti(with: areminder)
         } catch  {
-            EZAlertController.alert("数据库存储失败", message: error.localizedDescription)
+            EZAlertController.alert("Storage failure", message: error.localizedDescription)
             return false
         }
         return true
     }
     
     func deleteReminder(_ reminder:Reminder) -> Bool{
+        let deleteReminder = reminder
+        ReminderNotification.center.remove(with: deleteReminder)
         self.cdManager.context.delete(reminder)
+        
         do {
             try self.cdManager.context.save()
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
-            ReminderNotification.center.remove(with: reminder)
+            
             return true
         } catch {
-            EZAlertController.alert("数据删除失败", message: error.localizedDescription)
+            EZAlertController.alert("Delete failed", message: error.localizedDescription)
         }
         return false
     }
     
     func updateReminder(_ areminder:Reminder,name:String?, note:String?, fireDate:Date?,
                         repeatType:Int16,shouldNoti:Bool ,shouldCalendar:Bool = false) -> Bool{
+        ReminderNotification.center.remove(with: areminder)
         areminder.name = name
         areminder.note = note
         areminder.fireDate = fireDate
@@ -60,12 +64,13 @@ extension Persistent {
         areminder.notify = shouldNoti
         areminder.calendar = shouldCalendar
         areminder.createDate = Date.init(timeIntervalSinceNow: 0)
+        ReminderNotification.center.addNoti(with: areminder)
         do {
             try self.cdManager.context.save()
             NotificationCenter.default.post(name: NSNotification.Name.EX.coreDataChanged, object: nil, userInfo: nil)
             
         } catch  {
-            EZAlertController.alert("数据库更新失败", message: error.localizedDescription)
+            EZAlertController.alert("Update failed", message: error.localizedDescription)
             return false
         }
         return true
@@ -80,7 +85,7 @@ extension Persistent {
                 return results
             }
         } catch  {
-            EZAlertController.alert("数据库查询失败", message: error.localizedDescription)
+            EZAlertController.alert("Fetch failed", message: error.localizedDescription)
         }
         return nil
         

@@ -12,22 +12,26 @@ class RepeatModelViewController: UIViewController {
 
     enum RepeatType:Int16 {
         case once = 0
-        case daily = 1
-        case monthly = 2
-        case annum = 3
+        case hourly = 1
+        case daily = 2
+        case weekly = 3
+        case monthly = 4
+        case annum = 5
         
         func showText() -> String {
             switch self {
             case .once:
                 return "Once"
+            case .hourly:
+                return "Hourly"
             case .daily:
                 return "Daily"
+            case .weekly:
+                return "Weekly"
             case .monthly:
                 return "Monthly"
             case .annum:
                 return "Annum"
-            default:
-                return "Once"
             }
         }
     }

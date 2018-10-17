@@ -47,7 +47,7 @@ class ReminderTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderTableViewCell", for: indexPath) as! ReminderTableViewCell
         let reminder = self.dataSource[indexPath.row]
         cell.nameLabel.text = reminder.name
-        cell.dateLael.text = reminder.fireDate?.description
+        cell.dateLael.text = reminder.fireDate!.reminderFormater()
         cell.noteLabel.text = reminder.note
         
         return cell

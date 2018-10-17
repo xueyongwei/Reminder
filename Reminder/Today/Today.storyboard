@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaC-6r-LCl">
-                                <rect key="frame" x="142.5" y="176" width="90" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The countdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaC-6r-LCl">
+                                <rect key="frame" x="116" y="176" width="143" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:08:46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-9d-s29" customClass="CountDownLabel" customModule="Reminder" customModuleProvider="target">
-                                <rect key="frame" x="133.5" y="233" width="108" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                <rect key="frame" x="141.5" y="233" width="92" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,9 +50,15 @@
                                     <segue destination="35X-NC-jmh" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="75X-Ww-ctm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喝水" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-h0-KcP">
-                                <rect key="frame" x="157" y="315.5" width="61" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-h0-KcP">
+                                <rect key="frame" x="110" y="315.5" width="155.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The countdown" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-m8-GB6">
+                                <rect key="frame" x="15" y="366.5" width="345" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,10 +66,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9hl-9d-s29" firstAttribute="top" secondItem="uaC-6r-LCl" secondAttribute="bottom" constant="30" id="9sF-AJ-kG4"/>
+                            <constraint firstItem="WHv-m8-GB6" firstAttribute="centerX" secondItem="A4h-h0-KcP" secondAttribute="centerX" id="AEU-PH-YaD"/>
                             <constraint firstItem="LN5-Lc-cgt" firstAttribute="centerX" secondItem="jSA-Q2-9cl" secondAttribute="centerX" id="GDY-eW-rgJ"/>
                             <constraint firstItem="A4h-h0-KcP" firstAttribute="centerY" secondItem="jSA-Q2-9cl" secondAttribute="centerY" id="LLB-Af-ENF"/>
+                            <constraint firstItem="WHv-m8-GB6" firstAttribute="leading" secondItem="8CL-ZW-p70" secondAttribute="leading" constant="15" id="Nbq-e6-t3U"/>
+                            <constraint firstItem="WHv-m8-GB6" firstAttribute="top" secondItem="A4h-h0-KcP" secondAttribute="bottom" constant="15" id="VWv-c8-eB3"/>
                             <constraint firstItem="uaC-6r-LCl" firstAttribute="centerX" secondItem="jSA-Q2-9cl" secondAttribute="centerX" id="YBf-Xb-8Ne"/>
                             <constraint firstItem="A4h-h0-KcP" firstAttribute="centerX" secondItem="jSA-Q2-9cl" secondAttribute="centerX" id="aB5-Vn-BVg"/>
+                            <constraint firstItem="8CL-ZW-p70" firstAttribute="trailing" secondItem="WHv-m8-GB6" secondAttribute="trailing" constant="15" id="haO-Te-xg5"/>
                             <constraint firstItem="8CL-ZW-p70" firstAttribute="bottom" secondItem="LN5-Lc-cgt" secondAttribute="bottom" constant="60" id="rIW-k1-XQB"/>
                             <constraint firstItem="uaC-6r-LCl" firstAttribute="top" secondItem="8CL-ZW-p70" secondAttribute="top" constant="60" id="rYv-Q3-u01"/>
                             <constraint firstItem="9hl-9d-s29" firstAttribute="centerX" secondItem="jSA-Q2-9cl" secondAttribute="centerX" id="sVU-A1-GK6"/>
@@ -73,6 +83,8 @@
                     <navigationItem key="navigationItem" title="Next" id="mmb-1C-Ua8"/>
                     <connections>
                         <outlet property="countDownLabel" destination="9hl-9d-s29" id="HvC-gZ-3Mh"/>
+                        <outlet property="nameLabe" destination="A4h-h0-KcP" id="vUC-e6-E2b"/>
+                        <outlet property="noteLabel" destination="WHv-m8-GB6" id="Gvq-EB-ySC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vly-tF-IDE" sceneMemberID="firstResponder"/>

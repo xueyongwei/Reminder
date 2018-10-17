@@ -11,6 +11,8 @@ import UIKit
 class TodayViewController: UIViewController {
 
     @IBOutlet weak var countDownLabel: CountDownLabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var nameLabe: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class TodayViewController: UIViewController {
     
     func resetCountDown(){
         countDownLabel.prefix = ""
-        countDownLabel.maxSecond = 120000
+        countDownLabel.maxSecond = 300
     }
     
     

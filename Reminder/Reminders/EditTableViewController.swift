@@ -175,7 +175,7 @@ class EditTableViewController: UITableViewController {
             let vc = segue.destination as! TimeChoseViewController
             vc.chosedTimeHandle = {[weak self] date in
                 self?.fireDate = date
-                self?.timeLabel.text = date.description
+                self?.timeLabel.text = date.reminderFormater()
             }
             
         }else{
@@ -218,15 +218,36 @@ extension EditTableViewController{
     
     func setUpDefalutModel(){
         if let reminder = self.model{
-            self.nameTF.text = reminder.name
-            self.noteTF.text = reminder.note
+            
             self.fireDate = reminder.fireDate
             
+            
+            self.nameTF.text = reminder.name
+            self.noteTF.text = reminder.note
+            
+            
             self.repeatLabel.text = RepeatModelViewController.RepeatType.init(rawValue: reminder.repeatType)?.showText()
+            self.timeLabel.text  = reminder.fireDate!.reminderFormater()
+            
             self.notiSwitch.isOn = reminder.notify
             self.cleaSwitch.isOn = reminder.calendar
         }
         
+    }
+    
+    func fireDateShowText(_ reminder:Reminder) -> String {
+        
+        var showText = ""
+        if let repeatModel = RepeatModelViewController.RepeatType.init(rawValue: reminder.repeatType) {
+            showText += repeatModel.showText()
+            showText += ":"
+        }
+        let timezone = TimeZone.current
+        let formater = DateFormatter.init()
+        formater.timeZone = timezone
+        formater.dateFormat = "yyyy-MM-dd HH:mm"
+        showText += formater.string(from: reminder.fireDate!)
+        return showText
     }
     
     func deleteThisReminder(){
@@ -295,3 +316,12 @@ class AddTableViewCell: UITableViewCell {
     
 }
 
+extension Date{
+    func reminderFormater() -> String{
+        let timezone = TimeZone.current
+        let formater = DateFormatter.init()
+        formater.timeZone = timezone
+        formater.dateFormat = "yyyy-MM-dd HH:mm"
+        return formater.string(from: self)
+    }
+}
