@@ -57,6 +57,7 @@ class EditorViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.textField.becomeFirstResponder()
 //        animateShow()
     }
     

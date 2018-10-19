@@ -203,10 +203,10 @@ extension UILocalNotification{
             let nowDateComponent = calendar.dateComponents(components, from: now)
             let fireDateComponent = calendar.dateComponents(components, from: fireDate)
             guard let fireMo = fireDateComponent.month,let fireW = fireDateComponent.weekOfYear,let fireD = fireDateComponent.day,let fireH = fireDateComponent.hour,let fireMn = fireDateComponent.minute,let fireS = fireDateComponent.second else {
-                return -1
+                return 1
             }
             guard let nowMo = nowDateComponent.month,let nowW = nowDateComponent.weekOfYear,let nowD = nowDateComponent.day,let nowH = nowDateComponent.hour,let nowMn = nowDateComponent.minute,let nowS = nowDateComponent.second else {
-                return -1
+                return 1
             }
             switch self.repeatInterval  {
             case .hour:
@@ -250,10 +250,13 @@ extension UILocalNotification{
                     return (((d + fireD - nowD)*24 + fireH - nowH)*60 + fireMn - nowMn )*60 + fireS - nowS
                 }
             default:
+                if fireDate > now {
+                    return Int(fireDate.timeIntervalSince(now))
+                }
                 break
             }
         }
-        return -1
+        return 1
     }
 }
 

@@ -44,7 +44,6 @@ class TodayViewController: UIViewController {
                     
                     self.nameLabe.text = name
                     self.noteLabel.text = note
-                    
                     self.timeIntervalSinceNow = Double(noti.nextComingInterval())
                     self.resetCountDown()
                     customSubviews(noReminder: false)
