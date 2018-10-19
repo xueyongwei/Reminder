@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4709FB96217994230080BF45 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4709FB95217994230080BF45 /* History.storyboard */; };
+		4709FB982179CE600080BF45 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709FB972179CE600080BF45 /* HistoryTableViewController.swift */; };
+		4709FB9B2179CED20080BF45 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709FB9A2179CED20080BF45 /* HistoryTableViewCell.swift */; };
+		4709FB9D2179D1050080BF45 /* HistoryDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709FB9C2179D1050080BF45 /* HistoryDescViewController.swift */; };
 		4727DACE2175C1E000D37198 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */; };
 		4727DAD12175C57200D37198 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */; };
 		4727DAD32175E50700D37198 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DAD22175E50700D37198 /* MoreTableViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		4709FB95217994230080BF45 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		4709FB972179CE600080BF45 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		4709FB9A2179CED20080BF45 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4709FB9C2179D1050080BF45 /* HistoryDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDescViewController.swift; sourceTree = "<group>"; };
 		4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
 		4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		4727DAD22175E50700D37198 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +88,20 @@
 		4709FB94217994130080BF45 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				4709FB992179CEC30080BF45 /* Views */,
 				4709FB95217994230080BF45 /* History.storyboard */,
+				4709FB972179CE600080BF45 /* HistoryTableViewController.swift */,
+				4709FB9C2179D1050080BF45 /* HistoryDescViewController.swift */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		4709FB992179CEC30080BF45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4709FB9A2179CED20080BF45 /* HistoryTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4727DACF2175C56100D37198 /* Views */ = {
@@ -301,11 +318,14 @@
 				4727DACE2175C1E000D37198 /* ReminderTableViewController.swift in Sources */,
 				47E62BB221607DCF00032B61 /* AppDelegate.swift in Sources */,
 				47B947A521709A0600213528 /* CDManager.swift in Sources */,
+				4709FB9B2179CED20080BF45 /* HistoryTableViewCell.swift in Sources */,
 				47654E64216DAF280068F570 /* CountDownLabel+Timer.swift in Sources */,
 				47E62BB421607DCF00032B61 /* TodayViewController.swift in Sources */,
 				47B947AE2170AEBF00213528 /* RootTabbarViewController.swift in Sources */,
+				4709FB982179CE600080BF45 /* HistoryTableViewController.swift in Sources */,
 				47654E65216DAF280068F570 /* CountDownLabel.swift in Sources */,
 				47B947A821709E6000213528 /* Persistent.swift in Sources */,
+				4709FB9D2179D1050080BF45 /* HistoryDescViewController.swift in Sources */,
 				47E62BCC2160D28400032B61 /* TimeChoseViewController.swift in Sources */,
 				4727DAD82175E6D000D37198 /* ReminderNotification.swift in Sources */,
 				4727DAD12175C57200D37198 /* ReminderTableViewCell.swift in Sources */,

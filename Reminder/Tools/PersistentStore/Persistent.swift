@@ -92,6 +92,32 @@ extension Persistent {
     }
     
   
+    func addHistory(name:String?,note:String?,createDate:Date?,fireDate:Date?) {
+        let ahistory = NSEntityDescription.insertNewObject(forEntityName: "History", into: self.cdManager.context) as! History
+        ahistory.name = name
+        ahistory.note = note
+        ahistory.createDate = createDate
+        ahistory.fireDate = fireDate
+        do {
+            try self.cdManager.context.save()
+        } catch {
+            print("fialed = \(error.localizedDescription)")
+        }
+    }
+    
+    func queryAllHistory()->[History]?{
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "History")
+        request.sortDescriptors = [NSSortDescriptor.init(key: "createDate", ascending: false)]
+        do {
+            let results = try self.cdManager.context.fetch(request) as? [History]
+            return results
+        } catch  {
+            print("results fetch error:\(error.localizedDescription)")
+            
+        }
+        return nil
+    }
+    
 }
 
 extension NSNotification.Name{

@@ -15,7 +15,10 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var countDownLabel: CountDownLabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var nameLabe: UILabel!
+    
     fileprivate var timeIntervalSinceNow:Double = 0.0
+    fileprivate var currentFireDate:Date?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.countDownLabel.countDownCompleteClosure = {[weak self] in
@@ -36,6 +39,9 @@ class TodayViewController: UIViewController {
         if let noti = ReminderNotification.center.upcomingNoti(){
             if let userInfo = noti.userInfo{
                 if let name = userInfo["name"] as? String,let note = userInfo["note"] as? String,let date = userInfo["fireDate"] as? Date{
+                    
+                    self.currentFireDate = date
+                    
                     self.nameLabe.text = name
                     self.noteLabel.text = note
                     
@@ -56,6 +62,7 @@ class TodayViewController: UIViewController {
 //        }
 //    }
     func markCurrentAction() {
+        Persistent.store.addHistory(name: self.nameLabe.text, note: self.noteLabel.text, createDate: Date.init(), fireDate: currentFireDate)
         
     }
     func customSubviews(noReminder:Bool){

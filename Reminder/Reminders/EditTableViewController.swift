@@ -151,14 +151,14 @@ class EditTableViewController: UITableViewController {
         
         if segue.identifier == "noteEdit" {
             let vc = segue.destination as! EditorViewController
-            vc.title = "编辑备注"
+            vc.title = "Edit note"
             vc.defaultText = self.noteTF.text
             vc.commitHandle = {[weak self] str in
                 self?.noteTF.text = str
             }
         }else if segue.identifier == "titleEdit" {
             let vc = segue.destination as! EditorViewController
-            vc.title = "编辑事件名"
+            vc.title = "Edit name"
             vc.defaultText = self.nameTF.text
             vc.commitHandle = {[weak self] str in
                 self?.nameTF.text = str
@@ -194,7 +194,7 @@ extension EditTableViewController{
     @objc func onUpdateClick(){
         if let reminder = model{
             guard  let name = self.nameTF.text,let date = self.fireDate else {
-                EZAlertController.alert("事件名和提醒时间必填")
+                EZAlertController.alert("The event name and firedate is required")
                 return
             }
             if Persistent.store.updateReminder(reminder, name: name, note: noteTF.text, fireDate: date, repeatType: self.currentRepeatModel.rawValue, shouldNoti: self.notiSwitch.isOn, shouldCalendar: false) {
@@ -205,7 +205,7 @@ extension EditTableViewController{
     }
     func safeToDB(){
         guard  let name = self.nameTF.text,let date = self.fireDate else {
-            EZAlertController.alert("事件名和提醒时间必填")
+            EZAlertController.alert("The event name and firedate is required")
             return
         }
         
@@ -303,7 +303,7 @@ extension EditorViewController
         }
         
         @objc func onDeleteClick(){
-            EZAlertController.alert("确认删除", message: "删除后无法恢复", buttons: ["删除","取消"]) { (action, index) in
+            EZAlertController.alert("Confirm deletion?", message: "Cannot recover after deletion", buttons: ["DELETE","Cancel"]) { (action, index) in
                 if index == 0 {
                     self.deleteHandel?()
                 }
