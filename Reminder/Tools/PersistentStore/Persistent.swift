@@ -76,7 +76,7 @@ extension Persistent {
         return true
     }
     
-    func qurryAllData() ->[Reminder]? {
+    func qurryAllReminder() ->[Reminder]? {
         let reqest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Reminder")
         reqest.sortDescriptors = [NSSortDescriptor.init(key: "createDate", ascending: false)]
         do {

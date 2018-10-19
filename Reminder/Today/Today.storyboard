@@ -38,10 +38,9 @@
                                     <constraint firstAttribute="width" constant="100" id="n01-I6-I6X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
-                                <state key="normal" title="Done">
+                                <state key="normal" title="Mark">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" title="New"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="50"/>
@@ -108,14 +107,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不积跬步，无以至千里" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57s-8J-fDM">
-                                            <rect key="frame" x="90.5" y="322" width="194" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New records have been added" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57s-8J-fDM">
+                                            <rect key="frame" x="58.5" y="322" width="258" height="23"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可喜可贺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st5-08-XdK">
-                                            <rect key="frame" x="77" y="196" width="221" height="66"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st5-08-XdK">
+                                            <rect key="frame" x="66" y="196" width="243" height="66"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="55"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -139,7 +138,7 @@
                                     <constraint firstAttribute="width" constant="100" id="M9z-BY-PMC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="继续">
+                                <state key="normal" title="OK">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -171,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="2439" y="-413"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Next-->
         <scene sceneID="dks-ZF-cp3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KA0-VU-6x0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="DXC-E3-AfF"/>
+                    <tabBarItem key="tabBarItem" title="Next" image="clock" selectedImage="clock_fill" id="DXC-E3-AfF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="AOh-IJ-AkG">
@@ -183,9 +182,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f4K-1O-5V3">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="HlC-Tv-Tke" kind="relationship" relationship="rootViewController" id="Eaf-9Z-bl0"/>
                     </connections>
@@ -195,4 +191,8 @@
             <point key="canvasLocation" x="749.60000000000002" y="-413.3433283358321"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" width="24" height="24"/>
+        <image name="clock_fill" width="32" height="32"/>
+    </resources>
 </document>

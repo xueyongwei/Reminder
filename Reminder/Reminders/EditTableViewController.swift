@@ -26,7 +26,7 @@ class EditTableViewController: UITableViewController {
     @IBOutlet weak var repeatLabel: UILabel!
     @IBOutlet weak var notiSwitch: UISwitch!
     
-    @IBOutlet weak var cleaSwitch: UISwitch!
+//    @IBOutlet weak var cleaSwitch: UISwitch!
     
     var editType = EditType.add
     
@@ -197,7 +197,7 @@ extension EditTableViewController{
                 EZAlertController.alert("事件名和提醒时间必填")
                 return
             }
-            if Persistent.store.updateReminder(reminder, name: name, note: noteTF.text, fireDate: date, repeatType: self.currentRepeatModel.rawValue, shouldNoti: self.notiSwitch.isOn, shouldCalendar: self.cleaSwitch.isOn) {
+            if Persistent.store.updateReminder(reminder, name: name, note: noteTF.text, fireDate: date, repeatType: self.currentRepeatModel.rawValue, shouldNoti: self.notiSwitch.isOn, shouldCalendar: false) {
                 self.navigationController?.popViewController(animated: true)
             }
             
@@ -209,7 +209,7 @@ extension EditTableViewController{
             return
         }
         
-        if Persistent.store.addNewReminder(name: name, note: self.noteTF.text ?? "", fireDate: date, repeatType: self.currentRepeatModel.rawValue, shouldNoti: self.notiSwitch.isOn, shouldCalendar: self.cleaSwitch.isOn)
+        if Persistent.store.addNewReminder(name: name, note: self.noteTF.text ?? "", fireDate: date, repeatType: self.currentRepeatModel.rawValue, shouldNoti: self.notiSwitch.isOn, shouldCalendar: false)
         {
             self.navigationController?.popViewController(animated: true)
         }
@@ -230,7 +230,7 @@ extension EditTableViewController{
             self.timeLabel.text  = reminder.fireDate!.reminderFormater()
             
             self.notiSwitch.isOn = reminder.notify
-            self.cleaSwitch.isOn = reminder.calendar
+//            self.cleaSwitch.isOn = reminder.calendar
         }
         
     }
@@ -257,7 +257,7 @@ extension EditTableViewController{
                 self.navigationController?.popViewController(animated: true)
             }
         }else{
-            EZAlertController.alert("不可删除")
+            EZAlertController.alert("Can't delete")
         }
         
     }

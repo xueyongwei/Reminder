@@ -14,6 +14,8 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLael: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     
+    @IBOutlet weak var repeatLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

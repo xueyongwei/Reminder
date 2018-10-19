@@ -50,12 +50,14 @@ class TodayViewController: UIViewController {
     }
     
     
-    func deleteRecentNoti() {
-        if let noti = ReminderNotification.center.upcomingNoti(){
-            UIApplication.shared.cancelLocalNotification(noti)
-        }
+//    func deleteRecentNoti() {
+//        if let noti = ReminderNotification.center.upcomingNoti(){
+//            UIApplication.shared.cancelLocalNotification(noti)
+//        }
+//    }
+    func markCurrentAction() {
+        
     }
-    
     func customSubviews(noReminder:Bool){
         self.descLabel.isHidden = noReminder
         self.countDownLabel.isHidden = noReminder
@@ -74,7 +76,7 @@ class TodayViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? FullScreenAlertViewController {
             vc.doneClickHandle = {[weak self] in
-                self?.deleteRecentNoti()
+                self?.markCurrentAction()
                 self?.refreshNoti()
             }
         }

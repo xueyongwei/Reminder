@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4709FB96217994230080BF45 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4709FB95217994230080BF45 /* History.storyboard */; };
 		4727DACE2175C1E000D37198 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */; };
 		4727DAD12175C57200D37198 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */; };
 		4727DAD32175E50700D37198 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727DAD22175E50700D37198 /* MoreTableViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4709FB95217994230080BF45 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		4727DACD2175C1E000D37198 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
 		4727DAD02175C57200D37198 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		4727DAD22175E50700D37198 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4709FB94217994130080BF45 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4709FB95217994230080BF45 /* History.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		4727DACF2175C56100D37198 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 		47E62BB021607DCF00032B61 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				4709FB94217994130080BF45 /* History */,
 				47B947A3217099BB00213528 /* Tools */,
 				47654E48216DAEB10068F570 /* Vendor */,
 				47654E47216DAE6D0068F570 /* Common */,
@@ -267,6 +278,7 @@
 			files = (
 				47654E41216DA4900068F570 /* Reminders.storyboard in Resources */,
 				47654E43216DA7AF0068F570 /* More.storyboard in Resources */,
+				4709FB96217994230080BF45 /* History.storyboard in Resources */,
 				47654E3F216DA4800068F570 /* Today.storyboard in Resources */,
 				47E62BBE21607DD100032B61 /* LaunchScreen.storyboard in Resources */,
 				47E62BBB21607DD100032B61 /* Assets.xcassets in Resources */,

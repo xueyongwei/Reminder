@@ -27,7 +27,7 @@ class ReminderTableViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
     @objc func qurryAlldata(){
-        if let dataSource = Persistent.store.qurryAllData(){
+        if let dataSource = Persistent.store.qurryAllReminder(){
             self.dataSource = dataSource
         }
         self.tableView.reloadData()
@@ -49,7 +49,7 @@ class ReminderTableViewController: UITableViewController {
         cell.nameLabel.text = reminder.name
         cell.dateLael.text = reminder.fireDate!.reminderFormater()
         cell.noteLabel.text = reminder.note
-        
+        cell.repeatLabel.text = RepeatModelViewController.RepeatType.init(rawValue: reminder.repeatType)?.showText()
         return cell
     }
     
