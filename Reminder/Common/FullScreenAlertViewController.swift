@@ -11,6 +11,9 @@ import UIKit
 class FullScreenAlertViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
+    typealias DoneClickHandle = ()->()
+    
+    var doneClickHandle:DoneClickHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +34,9 @@ class FullScreenAlertViewController: UIViewController {
     }
     
     @IBAction func onDoneClick(_ sender: UIButton) {
+        self.doneClickHandle?()
         UIView.animate(withDuration: 0.3, animations: {
+            
             self.view.alpha = 0
         }) { (finished) in
             self.dismiss(animated: false, completion: nil)

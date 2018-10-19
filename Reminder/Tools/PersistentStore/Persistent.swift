@@ -78,7 +78,7 @@ extension Persistent {
     
     func qurryAllData() ->[Reminder]? {
         let reqest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Reminder")
-        reqest.sortDescriptors = [NSSortDescriptor.init(key: "createDate", ascending: true)]
+        reqest.sortDescriptors = [NSSortDescriptor.init(key: "createDate", ascending: false)]
         do {
             if let results = try self.cdManager.context.fetch(reqest) as? [Reminder]{
                 print(results)
@@ -90,6 +90,8 @@ extension Persistent {
         return nil
         
     }
+    
+  
 }
 
 extension NSNotification.Name{

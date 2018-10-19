@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The countdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaC-6r-LCl">
-                                <rect key="frame" x="116" y="176" width="143" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coming..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaC-6r-LCl">
+                                <rect key="frame" x="145" y="176" width="85" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,27 +27,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:08:46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-9d-s29" customClass="CountDownLabel" customModule="Reminder" customModuleProvider="target">
                                 <rect key="frame" x="141.5" y="233" width="92" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN5-Lc-cgt">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN5-Lc-cgt">
                                 <rect key="frame" x="137.5" y="458" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="L8S-Gs-pq7"/>
                                     <constraint firstAttribute="width" constant="100" id="n01-I6-I6X"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="selected" title="New"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="35X-NC-jmh" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="75X-Ww-ctm"/>
+                                    <segue destination="35X-NC-jmh" kind="presentation" identifier="" animates="NO" modalPresentationStyle="overFullScreen" id="75X-Ww-ctm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-h0-KcP">
@@ -82,7 +83,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Next" id="mmb-1C-Ua8"/>
                     <connections>
+                        <outlet property="actionBtn" destination="LN5-Lc-cgt" id="pHS-EM-uGF"/>
                         <outlet property="countDownLabel" destination="9hl-9d-s29" id="HvC-gZ-3Mh"/>
+                        <outlet property="descLabel" destination="uaC-6r-LCl" id="jY9-Q0-XXj"/>
                         <outlet property="nameLabe" destination="A4h-h0-KcP" id="vUC-e6-E2b"/>
                         <outlet property="noteLabel" destination="WHv-m8-GB6" id="Gvq-EB-ySC"/>
                     </connections>
